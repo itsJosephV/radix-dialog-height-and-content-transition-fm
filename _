@@ -1,0 +1,87 @@
+// import { useState } from "react";
+// import "./App.css";
+// import * as Dialog from "@radix-ui/react-dialog";
+// import { motion } from "framer-motion";
+// import { MotionConfig } from "framer-motion";
+// import useMeasure from "react-use-measure";
+
+// function App() {
+
+//   const [content, setContent] = useState("a");
+
+//   const draftA = (
+//     <div>
+//       <p>
+//         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis aut
+//         reprehenderit, sint, temporibus voluptatem molestias ullam nesciunt,
+//         neque iure cumque ratione minus et libero dolorem! Rerum doloremque
+//         culpa corrupti dolor!
+//       </p>
+//       <button className="text-black" onClick={() => setContent("b")}>
+//         press
+//       </button>
+//     </div>
+//   );
+//   const draftB = (
+//     <div>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+//         eligendi dolorem omnis. Placeat suscipit asperiores animi labore quae
+//         expedita quisquam dolore deleniti eius, doloribus velit delectus
+//         accusantium, ut atque nemo.
+//       </p>
+//       <p>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+//         eligendi dolorem omnis. Placeat suscipit asperiores animi labore quae
+//         expedita quisquam dolore deleniti eius, doloribus velit delectus
+//         accusantium, ut atque nemo.
+//       </p>
+//       <button className="text-black" onClick={() => setContent("a")}>
+//         back
+//       </button>
+//     </div>
+//   );
+
+//   const modalContent = {
+//     a: draftA,
+//     b: draftB,
+//   };
+//   return (
+//     <MotionConfig transition={{ duration: 1 }}>
+//       <Dialog.Root>
+//         <Dialog.Trigger>open</Dialog.Trigger>
+//         <Dialog.Portal>
+//           <Dialog.Overlay className="fixed inset-0 bg-black/50 data-[state=closed]:animate-[dialog-overlay-hide_200ms] data-[state=open]:animate-[dialog-overlay-show_200ms]" />
+//           <Dialog.Content asChild className="">
+//             <motion.div
+//               initial={{ opacity: 0 }}
+//               animate={{ opacity: 1 }}
+//               transition={{ duration: 0.2, ease: "easeIn" }}
+//               exit={{ opacity: 0 }}
+//               layout
+//               className="absolute inset-x-0 mx-auto bottom-0 top-0 right-0 left-0 m-auto max-w-lg rounded-md bg-white p-8 text-gray-900 shadow h-fit w-fit"
+//             >
+//               <motion.div layout>
+//                 <p className="text-red-300">
+//                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+//                   Officia soluta.
+//                 </p>
+//               </motion.div>
+//               <motion.div
+//                 className="mt-7"
+//                 layout="position"
+//                 key={content}
+//                 initial={{ opacity: 0 }}
+//                 animate={{ opacity: 1 }}
+//               >
+//                 {modalContent[content]}
+//               </motion.div>
+//             </motion.div>
+//           </Dialog.Content>
+//         </Dialog.Portal>
+//       </Dialog.Root>
+//     </MotionConfig>
+//   );
+// }
+
+// export default App;
